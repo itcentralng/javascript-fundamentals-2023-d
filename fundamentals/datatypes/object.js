@@ -15,6 +15,10 @@ let person = {
     ]
     };
 
+    let cat1 = {
+        name:"Malone"
+    }
+
     // Operations
 
     console.log(person.name)

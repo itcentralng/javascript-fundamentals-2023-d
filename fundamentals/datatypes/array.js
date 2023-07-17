@@ -1,6 +1,8 @@
 // Initialization
 let people = ["Yasir", "Usman", "Bello", "Ramalan"];
 
+let fruits = ["Apple", "Mango", "Cashew", ["Fanta", "Coke", ["Cola", [[[[[]]]]]]]]
+
 let hobbies = ['Swimming', 'Traveling', 'Reading', ['Flying', 'Scuba Diving']]
 
 // Methods
