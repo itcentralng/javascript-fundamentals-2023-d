@@ -57,3 +57,32 @@ console.log(ageCounter(2001))
 // Q3: Write a function that takes a list of students with their scores in a 
 // particular subject and returns a new list of students with their ranking
 // from 1 to any number of students their is. 1 being the best.
+// e.g. [{name:'James', score:100, subject:'English'}]
+// e.g. [1, 2, 3]
+
+// Select the maximum from the array
+//        Create a variable to hold the first element as the maximum
+//        Go through the array
+//        compare the current element on loop to the current max
+//        if it is higher it becomes new max
+//        repeat the process to the end of the array
+//        return the max number
+// Push max to a new array
+// Remove max from old array
+// then repeat until old array is empty
+// Return the new array
+
+const findMax = (list, index, biggest)=>{
+    if (index+1 > list.length){
+        return biggest
+    }else{
+        if (list[index] > biggest ){
+            biggest = list[index]
+        }
+        return findMax(list, index+1, biggest)
+    }
+}
+
+let a = [1, ,20, 2, 123, 50]
+
+console.log(findMax(a, 0, a[0]))
