@@ -86,3 +86,48 @@ const findMax = (list, index, biggest)=>{
 let a = [1, ,20, 2, 123, 50]
 
 console.log(findMax(a, 0, a[0]))
+
+
+
+// Q4. Using this array [6, 9, 11, 1, 10, 9, 8, 45] return a new array with
+// all the values in decending order.
+
+// Pseudocode:
+// 1 - Create empty spaces
+// 2 - Select the index of the highest number from the list of numbers
+//      - Assume the first is the highest
+//      - Until we find a bigger number
+//      - If we find a bigger number, it becomes the highest
+// 3 - Insert the highest number by its index in the space
+// 4 - Remove the number from its original place
+// 5 - repeat steps 2-4 till all numbers are selected
+
+const getHighest = (list) =>{
+      // 2
+      let highest = list[0];
+      let highestIndex = 0;
+      for (let i = 1; i<list.length; i+=1){
+          if (highest < list[i]){
+              highest = list[i]
+              highestIndex = i
+          }
+      }
+      return highestIndex;
+}
+
+const Ranker = (list)=>{
+    // 1
+    let emptySpace = [];
+    let count = list.length
+    for (let x=0; x<count; x+=1){
+        // 2
+        highestIndex = getHighest(list);
+        // 3
+        emptySpace.push(list[highestIndex]);
+        // 4
+        list.splice(highestIndex, 1)
+    }
+    console.log(emptySpace);
+}
+
+Ranker([1, 2, 4, 5, 6, 1, 1, 2])
