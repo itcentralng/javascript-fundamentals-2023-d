@@ -131,3 +131,10 @@ const Ranker = (list)=>{
 }
 
 Ranker([1, 2, 4, 5, 6, 1, 1, 2])
+
+// Q5. Assuming we have a list of students in this format:
+// students = [{id:'STD101', name:'Usman', scores:[{subject:'Basic Science', score:50}, {subject:'Numeracy', score:30}, {subject:'Literacy', score:20}]}, {id:'STD102', name:'Sani', scores:[{subject:'Basic Science', score:35}, {subject:'Numeracy', score:26}, {subject:'Literacy', score:14}]}, {id:'STD103', name:'Habib', scores:[{subject:'Basic Science', score:55}, {subject:'Numeracy', score:37}, {subject:'Literacy', score:25}]}]
+// Create a function that returns the position of a given student id
+// for example getPosition('STD101') ==> 3
+// for example getPosition('STD102') ==> 2
+// for example getPosition('STD103') ==> 1
