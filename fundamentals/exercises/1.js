@@ -6,6 +6,12 @@
 //          2. Decrement: Decrement the current value by K
 //          3. Get value: reutrns the current value
 
+
+
+
+
+
+
 const stepCounter = (k)=>{
     value = 0;
     return {

@@ -15,26 +15,3 @@
 
 // 3. If there is no order with the given orderId, then the function returns
 // the list orderList unchanged.
-
-const processOrderList = (orderList, orderId, state) => {
-    for (let i=0; i<orderList.length; i+=1){
-        if (orderList[i].id == orderId){
-            if (state != 'delivered'){
-                orderList[i].state = state
-            }else{
-                orderList.splice(i, 1);
-            }
-        }
-    }
-    return orderList
-}
-
-orderList = [
-    {id:1, state:'pending'},
-    {id:2, state:'pending'},
-    {id:3, state:'pending'},
-]
-orderId = 1
-state = 'processing'
-
-console.log(processOrderList(orderList, orderId, state));

@@ -138,3 +138,63 @@ Ranker([1, 2, 4, 5, 6, 1, 1, 2])
 // for example getPosition('STD101') ==> 3
 // for example getPosition('STD102') ==> 2
 // for example getPosition('STD103') ==> 1
+
+// Pseudocode:
+//1 Find total for each student
+//2 Assume the first student is the best student
+//3 Compare the best student total and the current student
+// total
+//4 If the current student total is greater than the best
+// student total, the current student becomes the best
+//5 Return the index of the best student
+//6 Then sort the list of students in decending order
+//7 Return the sorted list
+//8 Loop through the sorted list and get the student
+// with that id and return it's index + 1
+
+const getBestStudentIndex = (list) =>{
+    // 2
+    let highest = 0;
+    let highestIndex = 0;
+    for (let i = 0; i<list.length; i+=1){
+        let totalScore = 0;
+        for (let x = 0; x<list[i].scores.length; x+=1){
+            totalScore += list[i].scores[x].score
+        }
+        if (highest < totalScore){
+            highest = totalScore
+            highestIndex = i
+        }
+    }
+    return highestIndex;
+}
+
+const rankStudents = (list)=>{
+  // 1
+  let emptySpace = [];
+  let count = list.length
+  for (let x=0; x<count; x+=1){
+      // 2
+      let highestIndex = getBestStudentIndex(list);
+      // 3
+      emptySpace.push(list[highestIndex]);
+      // 4
+      list.splice(highestIndex, 1)
+  }
+  return emptySpace;
+}
+
+const getPosition = (studentId) =>{
+    let students = [{id:'STD101', name:'Usman', scores:[{subject:'Basic Science', score:50}, {subject:'Numeracy', score:30}, {subject:'Literacy', score:20}]}, {id:'STD102', name:'Sani', scores:[{subject:'Basic Science', score:35}, {subject:'Numeracy', score:26}, {subject:'Literacy', score:14}]}, {id:'STD103', name:'Habib', scores:[{subject:'Basic Science', score:55}, {subject:'Numeracy', score:37}, {subject:'Literacy', score:25}]}];
+    let rankedStudents = rankStudents(students);
+    let position = 0;
+    for (let i = 0; i<rankedStudents.length; i+=1){
+        if (studentId == rankedStudents[i].id){
+            position = i+1
+            break
+        }
+    }
+    return position? position : 'Student not found'
+}
+
+console.log(getPosition('STD102'));
