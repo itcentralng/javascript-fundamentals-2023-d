@@ -1,20 +1,17 @@
-let name
-const person = ""
-var girl = ""
+let name = "My name is Abdullah";
 
-let FirstName = ""
-let lastName = ""
-let middle_name = ""
-let surnamE = ""
-let name1 = ""
+let a = 20;
 
-let )djdj = ""
-let 1name = ""
+let 1name = "Ahmad";
 
-let typeOf = ""
+let &usman = "Somebody"
 
-let a = 5;
-let b = 5;
-let c = 5;
-let d = 6;
-let f = 6;
+let number1 = 20
+
+let _user_ = "User1"
+
+let user_two = "Sani"
+
+let userName = "someine"
+
+let Username = "user"

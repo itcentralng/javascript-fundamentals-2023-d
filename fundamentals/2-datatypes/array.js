@@ -5,21 +5,12 @@ let fruits = ["Apple", "Mango", "Cashew", ["Fanta", "Coke", ["Cola", [[[[[]]]]]]
 
 let hobbies = ['Swimming', 'Traveling', 'Reading', ['Flying', 'Scuba Diving']]
 
-// Methods
-console.log(people.length);
-console.log(people.at(3));
-console.log(people.concat(hobbies));
-console.log(people.includes('Yasir'));
-console.log(people.includes('Musa'));
-console.log(people.indexOf('Yasir'));
-console.log(people.join(' '));
-console.log(people.pop());
-console.log(people);
-console.log(people.push('Musa'))
-console.log(people);
+let house = [1, 1.2, "Ahmad", [1, 1.2], true]
 
-console.log(hobbies.at(3).at(1).split(' ').at(1))
-console.log(hobbies.at(3).at(1).split(' ').at(1).slice(2, 5))
-console.log(hobbies.at(2).slice(0, 4))
-console.log(hobbies.at(0).slice(0, 4))
-console.log(hobbies.at(2).slice(0, 3).concat(hobbies.at(1).slice(5, 9)))
+// Methods
+console.log(house.length)
+console.log(house[3].length)
+console.log(house.includes(1))
+console.log(house.includes(10))
+console.log(house.concat(people))
+console.log(house.indexOf(1))
